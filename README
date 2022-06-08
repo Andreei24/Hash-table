@@ -1,0 +1,21 @@
+Tema 1 SD - Tabele Hash
+Robert-Andrei Raucescu 335CB
+
+Detalierea implementarii:
+	
+	Programul citeste linie cu linie din fisierul de imput primit ca parametru
+si in functie de primul cuvant al unei linii determina tipul de operatie:
+	-insert -> Imparte restul liniei in cuvinte dupa " ", "." si "," iar pentru
+	fiecare aloca o structura de tip TWord in care se salveaza cuvantul efectiv
+	si seteaza numarul de aparitii al acestuia la 1.
+	Structura respectiva este trimisa la functia InsTH care verifica daca a mai
+	existat un cuvant care incepe cu aceeasi litera, iar in caz afirmativ,
+	cauta daca mai exista aceeasi lungime si eventual daca exista cuvantul.
+	Altfel se aloca structurile respective si sunt inserate in locurile lor
+	respectiv.
+
+	-print -> Determina tipul de afisare dupa numarul de argumente primite astfel:
+		- niciun argument: printeaza toata tabela hash
+		- 1 argument: printeaza toate elementele care maxim arg aparitii
+		- 2 argumente: printeaza toate elementele care incep cu litera arg1
+		si au o lungime de maxim arg2.
